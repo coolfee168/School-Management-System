@@ -1,0 +1,7 @@
+.vscode/
+.vs/
+*.db
+*.dtbcache.v2
+bin/
+obj/
+*.user
