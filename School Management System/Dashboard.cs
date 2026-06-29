@@ -94,7 +94,7 @@ namespace School_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmClass());
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -126,6 +126,11 @@ namespace School_Management_System
         private void frmPayment_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmStudentPayment());
+        }
+
+        private void btnClass_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmClasss());
         }
     }
 }

@@ -12,6 +12,7 @@ namespace School_Management_System
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new frmLogin());
+           
         }
     }
 }

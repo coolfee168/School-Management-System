@@ -31,13 +31,13 @@
             lblUser = new Label();
             lblRole = new Label();
             panel1 = new Panel();
+            btnClass = new Button();
             frmPayment = new Button();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             label1 = new Label();
             btnStudent = new Button();
             btnManage = new Button();
-            btnClass = new Button();
             btnDashboard = new Button();
             btnLogout = new Button();
             panelMain = new Panel();
@@ -68,23 +68,34 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.InactiveBorder;
+            panel1.Controls.Add(btnClass);
             panel1.Controls.Add(frmPayment);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btnStudent);
             panel1.Controls.Add(btnManage);
-            panel1.Controls.Add(btnClass);
             panel1.Controls.Add(btnDashboard);
             panel1.Controls.Add(btnLogout);
             panel1.Controls.Add(lblRole);
             panel1.Controls.Add(lblUser);
-            panel1.Dock = DockStyle.Fill;
+            panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1348, 721);
+            panel1.Size = new Size(234, 721);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
+            // 
+            // btnClass
+            // 
+            btnClass.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClass.Location = new Point(38, 253);
+            btnClass.Name = "btnClass";
+            btnClass.Size = new Size(150, 56);
+            btnClass.TabIndex = 17;
+            btnClass.Text = "Classes";
+            btnClass.UseVisualStyleBackColor = true;
+            btnClass.Click += btnClass_Click;
             // 
             // frmPayment
             // 
@@ -151,17 +162,6 @@
             btnManage.UseVisualStyleBackColor = true;
             btnManage.Click += button2_Click_1;
             // 
-            // btnClass
-            // 
-            btnClass.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnClass.Location = new Point(38, 254);
-            btnClass.Name = "btnClass";
-            btnClass.Size = new Size(150, 56);
-            btnClass.TabIndex = 10;
-            btnClass.Text = "Classes";
-            btnClass.UseVisualStyleBackColor = true;
-            btnClass.Click += button1_Click;
-            // 
             // btnDashboard
             // 
             btnDashboard.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -187,10 +187,10 @@
             // panelMain
             // 
             panelMain.BackColor = Color.White;
-            panelMain.Dock = DockStyle.Right;
-            panelMain.Location = new Point(233, 0);
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(234, 0);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1115, 721);
+            panelMain.Size = new Size(1114, 721);
             panelMain.TabIndex = 3;
             panelMain.Paint += panelMain_Paint;
             // 

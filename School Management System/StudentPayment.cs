@@ -103,6 +103,7 @@ namespace School_Management_System
                 MessageBox.Show("This student has already paid for this month.");
                 return;
             }
+
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -2,34 +2,19 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace School_Management_System
 {
-    public partial class frmClass : Form
+    public partial class frmClasss : Form
     {
-        SqlConnection con = new SqlConnection(
-            "Server= localhost\\SQLEXPRESS ;Initial Catalog=SchoolManagementDB;Integrated Security=True");
-        public frmClass()
+        SqlConnection con = new SqlConnection("Server= localhost\\SQLEXPRESS ;Initial Catalog=SchoolManagementDB;Integrated Security=True");
+        public frmClasss()
         {
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmClass_Load(object sender, EventArgs e)
-        {
-            LoadClass();
+            InitializeComponent();
         }
         private void LoadClass()
         {
@@ -42,7 +27,7 @@ namespace School_Management_System
             dgvClass.DataSource = dt;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddclass_Click(object sender, EventArgs e)
         {
             frmNewClass frm = new frmNewClass();
             if (frm.ShowDialog() == DialogResult.OK)
@@ -51,7 +36,8 @@ namespace School_Management_System
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+        private void btnDeleteclass_Click(object sender, EventArgs e)
         {
             if (dgvClass.CurrentRow == null)
             {
@@ -87,7 +73,7 @@ namespace School_Management_System
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnOpenclass_Click(object sender, EventArgs e)
         {
             if (dgvClass.CurrentRow == null)
             {
@@ -105,11 +91,6 @@ namespace School_Management_System
                 new frmClassDetail();
 
             frm.ShowDialog();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

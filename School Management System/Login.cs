@@ -13,7 +13,7 @@ namespace School_Management_System
     {
         //Connect to Database
         string connStr = "Server= localhost\\SQLEXPRESS;Database = SchoolManagementDB ;Integrated Security= true;Trusted_Connection= true;";
-        public frmLogin()      
+        public frmLogin()
         {
             InitializeComponent();
             this.AcceptButton = btnLogin;        //Add function
@@ -25,7 +25,7 @@ namespace School_Management_System
         {
             SqlConnection con = new SqlConnection(connStr);         //Open SQL
             try
-            {           
+            {
                 con.Open();
                 string sql =
                     "SELECT Username, Role " +
@@ -40,7 +40,7 @@ namespace School_Management_System
 
                 if (dr.Read())                  //if the Username&pass correct -> new dashboard with session below
                 {
-                    Session.Username = dr["Username"].ToString();           
+                    Session.Username = dr["Username"].ToString();
                     Session.Role = dr["Role"].ToString();
 
                     frmDashboard dashboard = new frmDashboard();
@@ -67,11 +67,7 @@ namespace School_Management_System
         }
         private void txtUsername_KeyDown(object sender, KeyEventArgs e)// When click enter in username textbox, it will move to password textbox
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtPass.Focus();
-                e.SuppressKeyPress = true;
-            }
+
         }
         private void txtPass_KeyDown(object sender, KeyEventArgs e)     //Enter password and click enter, it will perform login button click
         {
@@ -100,6 +96,22 @@ namespace School_Management_System
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void frmLogin_Shown(object sender, EventArgs e)
+        {
+            BeginInvoke(new Action(() =>
+            {
+                txtUser.Focus();
+            }));
+        }
+
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPass.Focus();
+            }
         }
     }
 

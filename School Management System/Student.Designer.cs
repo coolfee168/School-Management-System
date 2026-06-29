@@ -64,7 +64,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1097, 95);
+            panel1.Size = new Size(1097, 101);
             panel1.TabIndex = 6;
             // 
             // button4
@@ -102,16 +102,16 @@
             panel2.Controls.Add(btnAddStudent);
             panel2.Controls.Add(btnUpdate);
             panel2.Controls.Add(dgvStudent);
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 92);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1097, 582);
+            panel2.Size = new Size(1097, 674);
             panel2.TabIndex = 7;
             panel2.Paint += panel2_Paint;
             // 
             // btnPayment
             // 
-            btnPayment.Location = new Point(465, 507);
+            btnPayment.Location = new Point(465, 580);
             btnPayment.Name = "btnPayment";
             btnPayment.Size = new Size(123, 41);
             btnPayment.TabIndex = 11;
@@ -121,7 +121,7 @@
             // 
             // btnRefresh
             // 
-            btnRefresh.Location = new Point(954, 507);
+            btnRefresh.Location = new Point(954, 580);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(123, 41);
             btnRefresh.TabIndex = 10;
@@ -131,7 +131,7 @@
             // 
             // btnAddStudent
             // 
-            btnAddStudent.Location = new Point(628, 507);
+            btnAddStudent.Location = new Point(628, 580);
             btnAddStudent.Name = "btnAddStudent";
             btnAddStudent.Size = new Size(123, 41);
             btnAddStudent.TabIndex = 9;
@@ -141,7 +141,7 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(791, 507);
+            btnUpdate.Location = new Point(791, 580);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(123, 41);
             btnUpdate.TabIndex = 6;
@@ -153,11 +153,11 @@
             // 
             dgvStudent.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvStudent.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStudent.Location = new Point(11, 24);
+            dgvStudent.Location = new Point(11, 133);
             dgvStudent.Name = "dgvStudent";
             dgvStudent.ReadOnly = true;
             dgvStudent.RowHeadersWidth = 51;
-            dgvStudent.Size = new Size(1073, 448);
+            dgvStudent.Size = new Size(1073, 441);
             dgvStudent.TabIndex = 8;
             // 
             // frmStudent
@@ -169,6 +169,7 @@
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "frmStudent";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Student";
             Load += frmStudent_Load;
             panel1.ResumeLayout(false);

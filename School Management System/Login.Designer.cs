@@ -93,7 +93,7 @@
             txtUser.Size = new Size(267, 27);
             txtUser.TabIndex = 4;
             txtUser.TextChanged += txtUser_TextChanged;
-            txtUser.KeyDown += txtPass_KeyDown;
+            txtUser.KeyDown += txtUser_KeyDown;
             // 
             // txtPass
             // 
